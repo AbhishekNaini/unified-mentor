@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Electric Vehicle Recharge Stations</h1>
+<ul>
+    {% for station in stations %}
+    <li>
+        {{ station.name }} - {{ station.location }}
+        <a href="{% url 'book_slot' station.id %}">Book a Slot</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

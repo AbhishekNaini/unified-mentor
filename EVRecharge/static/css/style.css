@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+body {
+    -webkit-text-size-adjust: 100%;
+}
+.custom-body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.custom-card {
+    margin-bottom: 20px;
+}
+
+

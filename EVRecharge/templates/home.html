@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to the EV Recharge Station</h1>
+
+<h2>Available Stations</h2>
+<div class="row">
+    {% for station in stations %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="Station Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ station.name }}</h5>
+                    <p class="card-text">{{ station.location }}</p>
+                    <p class="card-text">Available Ports: {{ station.available_ports }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<h2>Recharge History</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Station</th>
+            <th>Amount</th>
+            <th>Recharge Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for history in recharge_history %}
+            <tr>
+                <td>{{ history.user_name }}</td>
+                <td>{{ history.station.name }}</td>
+                <td>{{ history.amount }}</td>
+                <td>{{ history.recharge_time }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,16 @@
+body{
+    background-color: mistyrose;
+    width: 100vw;
+}
+.box{
+    box-sizing: border-box;
+   width: 40vw;
+   background-color: white;
+   margin: auto;
+   margin-top: 100px;
+   border-radius: 30px;
+   padding: 50px;
+}
+.box>img{
+  height: 200px;
+}
